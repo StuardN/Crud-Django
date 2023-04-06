@@ -1,0 +1,123 @@
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <form action="post">
+        {% csrf_token %}
+        <div class="container shadow-sm p-3 mb-5 bg-body rounded">
+            <h3 class="text-white text-center bg-primary">Registro De Buses</h3>
+            <div class="row">
+            </div>
+
+            <div class="col-auto">
+                <div class="col-auto input-group row justify-content-md-end">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text " style="background:#e9ebee" id="basic-addon1">Modelo</span>
+                            {{ form.modelo }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text btn-success" id="basic-addon1">Marca</span>
+                            {{ form.marca }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto input-group row justify-content-md-end">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text btn-success" id="basic-addon1">Placa</span>
+                            {{ form.placa }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text btn-success" id="basic-addon1">Año Fábricado</span>
+                            {{ form.año_fabricado }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto input-group row justify-content-md-end">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text btn-success" id="basic-addon1">Motor</span>
+                            {{ form.motor }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text btn-success"
+                                  id="inputGroup-sizing-default">Año del Modelo</span>
+                            {{ form.año_modelo }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-auto input-group row justify-content-md-end">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text btn-success" id="basic-addon1">Chasís</span>
+                            {{ form.chasis }}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text btn-success" id="basic-addon1">Kilometraje</span>
+                            {{ form.kilometraje }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-auto input-group row justify-content-md-end">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3 ">
+                            <span class="input-group-text btn-success" id="basic-addon1">Capacidad de pasajeros</span>
+                            {{ form.capacidad_pasajero }}
+                        </div>
+                    </div>
+                    <div class="col-auto input-group row justify-content-md-end">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="basic-addon1">Ruedas</span>
+                                {{ form.ruedas }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="inputGroup-sizing-default">Ejes</span>
+                                {{ form.ejes }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="inputGroup-sizing-default">Propietario</span>
+                                {{ form.Propietario }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="inputGroup-sizing-default">Cédula</span>
+                                {{ form.cedula}}
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="inputGroup-sizing-default">Teléfono</span>
+                                {{ form.telefono}}
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text btn-success" id="inputGroup-sizing-default">Dirección</span>
+                                {{ form.direccion}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+{% endblock %}

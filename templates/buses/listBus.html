@@ -1,0 +1,33 @@
+{% extends 'consulta.html' %}
+{% load static %}
+
+{% block columns %}
+    <tr class="text-light text-center">
+        <th scope="col">#</th>
+        <th scope="col">Placa</th>
+        <th scope="col">Marca</th>
+        <th scope="col"># Asientos</th>
+        <th scope="col">Propietario</th>
+        <th scope="col"># Cédula</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col" style="width: 30%;">Acciones</th>
+      </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for object in buses %}
+          <tr>
+              <th scope="row">{{ object.id }}</th>
+              <td>{{ object.placa }}</td>
+              <td class="text-center"> {{ object.marca }}</td>
+              <td class="text-center"> {{ object.capacidad_pasajero }}</td>
+              <td class="text-center"> {{ object.Propietario}}</td>
+              <td class="text-center"> {{ object.cedula}}</td>
+              <td class="text-center">{{ object.telefono }}</td>
+              <td class="text-center">
+                  <a class='btn text-light bg-warning ' href="{% url 'actualizarBuses' object.id %}"> Actualizar </a>
+                  <a class='btn text-light bg-secondary ' href="{% url 'eliminarBuses' object.id %}"> Eliminar </a>
+              </td>
+          </tr>
+    {% endfor %}
+{% endblock %}
