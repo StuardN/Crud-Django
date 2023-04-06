@@ -1,4 +1,4 @@
-# Crud de Buses       :tw-1f68d: 
+# Crud de Buses:tw-1f68d: 
 
 >Este CRUD de buses es un proyecto desarrollado en Django, python, html y boostrap que permite al usuario interactuar con los datos de un bus.
 
